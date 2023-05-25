@@ -14,12 +14,14 @@
     color: white;
     text-shadow: 1px 1px black;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .questsButtonContainer button {
     background: none;
     border: none;
     color: inherit;
+    cursor: pointer;
     font-size: large;
     margin-left: 0.4rem;
 }

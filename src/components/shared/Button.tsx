@@ -6,7 +6,7 @@ export const Button = () => {
     return (
         <div className={styles.questsButtonContainer}>
             <Image src={questsImage} alt='quests icon' />
-            <button role="button" aria-label="Check Quests">
+            <button role="button" aria-label="Check Quests" onClick={(e) => console.log(e)}>
                 Check Quests
             </button>
         </div>

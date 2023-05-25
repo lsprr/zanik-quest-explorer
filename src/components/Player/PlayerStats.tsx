@@ -102,6 +102,7 @@ const renderSkill = (skill: keyof typeof images, player: Skill) => {
 }
 
 export const PlayerStats = ({ skills }: PlayerStatsProps) => {
+    console.log(skills);
     let sortedSkills: Partial<Skills> = {};
     if (skills) {
         order.forEach(key => {
