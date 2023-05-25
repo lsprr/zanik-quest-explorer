@@ -6,11 +6,13 @@ import { PlayerStats } from "@/components/Player/PlayerStats";
 import { Player } from "@/types/player.interface";
 import { Skills } from "@/types/player.interface";
 import styles from '@/styles/Home.module.css'
+import { Button } from "@/components/Button";
 
 export default function Home() {
     const [username, setUsername] = useState<string>("");
     const [player, setPlayer] = useState<Player | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
@@ -18,6 +20,7 @@ export default function Home() {
         const data: Player = await res.json();
         setPlayer(data);
         setIsLoading(false);
+        setIsLoaded(true);
     };
 
     return (
@@ -46,7 +49,8 @@ export default function Home() {
                 </form>
                 {isLoading
                     ? <Loading />
-                    : <PlayerStats skills={player?.skills || {} as Partial<Skills>} />}
+                    : isLoaded && <> <PlayerStats skills={player?.skills || {} as Partial<Skills>} /> <Button /> </>
+                }
             </Container>
         </>
     )

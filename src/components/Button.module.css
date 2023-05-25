@@ -1,0 +1,29 @@
+.questsButtonContainer {
+    font-size: 16px;
+    position: relative;
+    background: rgb(121,105,86);
+    background: linear-gradient(175deg, rgba(121,105,86,1) 0%, rgba(41,39,34,1) 100%);
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 240px;
+    height: 40px;
+    margin: 5px auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+}
+
+.questsButtonContainer button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: large;
+    margin-left: 0.4rem;
+}
+
+.questsButtonContainer button:focus {
+    background: rgba(0, 0, 0, 0.1);
+}
