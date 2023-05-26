@@ -140,4 +140,4 @@ This project is created by [Luis Parra](https://github.com/lsprr).
 ## Links
 
 - [GitHub](https://github.com/lsprr/zanik-quest-explorer)
-- [Live Site](https://www.zanik-quest-explorer.com)
+- [Live Site](https://zanik-quest-explorer.vercel.app)
