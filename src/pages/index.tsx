@@ -92,13 +92,8 @@ export default function Home() {
                     {isLoadingSearchedPlayer && <Loading />}
                     {searchedPlayer && !isNoSearchedPlayerFound && <Button onClick={handleLoadAllQuests} />}
                 </div>
-                <div>
-                    {isLoadingAllQuests
-                        ? <Loading />
-                        : allQuests.length > 0 &&
-						<QuestList skills={searchedPlayer?.skills || {} as Partial<Skills>}
-						           quests={allQuests} />
-                    }
+                <div className={styles['quests-container']}>
+                    <QuestList skills={searchedPlayer?.skills || {} as Partial<Skills>} quests={allQuests} loading={isLoadingAllQuests}  />
                 </div>
             </Container>
         </>

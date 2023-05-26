@@ -81,7 +81,7 @@ const renderSkill = (skill: keyof typeof images, player: Skill) => {
 
     if (skill === "overall") {
         return (
-            <div key={skill} className={styles['skill']}>
+            <div key={skill} className={styles['skill']} role="presentation">
                 <div className={styles['skill-total']}>
                     <div>Total Level:</div>
                     <div>{player.level}</div>
@@ -91,13 +91,13 @@ const renderSkill = (skill: keyof typeof images, player: Skill) => {
     }
 
     return (
-        <div key={skill} className={styles['skill']}>
+        <div key={skill} className={styles['skill']} role="presentation">
             <div className={styles['skill__icon']}>
-                <Image src={images[skill]} alt={skill} />
+                <Image src={images[skill]} alt={`${skill} icon`} />
             </div>
-            <div className={styles['skills__container']}>
+            <div className={styles['skills__container']} aria-label={`${skill} level: ${levelTop}`}>
                 <div className={styles['skill__level--top']}>{levelTop}</div>
-                <div className={styles['skill__slant']}></div>
+                <div className={styles['skill__slant']} role="presentation"></div>
                 <div className={styles['skill__level--bottom']}>{levelBottom}</div>
             </div>
         </div>
@@ -111,7 +111,7 @@ export const PlayerStats = ({ skills }: PlayerStatsProps) => {
     });
 
     return (
-        <div className={styles['skills__container']}>
+        <div className={styles['skills__container']} role="presentation">
             {Object.entries(sortedSkills).map(([skill, player]) => renderSkill(skill as keyof typeof images, player as Skill))}
         </div>
     )

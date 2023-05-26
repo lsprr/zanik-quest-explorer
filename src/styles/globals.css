@@ -28,3 +28,60 @@ body {
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
 }
+
+.ribbon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    position: relative;
+}
+
+.ribbon__content {
+    background-color: #971212;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.ribbon__content-title {
+    font-size: large;
+    height: 100%;
+    position: relative;
+    top: 0.2rem;
+}
+
+.ribbon__side {
+    bottom: -0.5rem;
+    position: absolute;
+    z-index: 1;
+    border: 1rem solid #d1d5db;
+}
+
+.ribbon__side--l {
+    left: -1.5rem;
+    border-color: #dd1a1a #dd1a1a #dd1a1a transparent;
+}
+
+.ribbon__side--r {
+    right: -1.5rem;
+    border-color: #dd1a1a transparent #dd1a1a #dd1a1a;
+}
+
+.ribbon__triangle {
+    position: absolute;
+    top: 100%;
+    border: 0.5rem solid transparent;
+    border-bottom-width: 0;
+    border-top-color: #aaa;
+}
+
+.ribbon__triangle--l {
+    border-right-width: 0;
+    left: 0;
+}
+
+.ribbon__triangle--r {
+    border-left-width: 0;
+    right: 0;
+}

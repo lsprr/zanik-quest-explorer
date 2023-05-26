@@ -1,0 +1,17 @@
+.questItem {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.questItem__title {
+    cursor: pointer;
+    font-size: large;
+}
+.questItem__status {}
+
+.questItem__status-qualified {
+    color: darkgreen;
+}
+
+.questItem__status-unqualified {
+    color: maroon;
+}
