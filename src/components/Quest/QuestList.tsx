@@ -8,7 +8,7 @@ import { QuestItem } from "@/components/Quest/QuestItem";
 import { QuestDetails } from "@/components/Quest/QuestDetails";
 
 interface QuestListProps {
-    skills: Skills;
+    skills: Partial<Skills>;
     quests: Quest[];
     loading: boolean;
 }
@@ -32,7 +32,7 @@ export const QuestList = ({ skills, quests, loading }: QuestListProps) => {
                 const [levelString, skillName] = skillRequirement.split(" ");
                 const requiredLevel = parseInt(levelString.replace("Level", "").trim(), 10);
 
-                return skills[skillName as keyof Skills]?.level >= requiredLevel;
+                return (skills[skillName as keyof Skills]?.level || 0) >= requiredLevel;
             });
 
             if (isQualified) {
