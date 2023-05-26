@@ -9,7 +9,7 @@
 .questItem__status {}
 
 .questItem__status-qualified {
-    color: darkgreen;
+    color: #091709;
 }
 
 .questItem__status-unqualified {
