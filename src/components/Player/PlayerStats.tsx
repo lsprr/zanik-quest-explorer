@@ -76,10 +76,13 @@ interface PlayerStatsProps {
 }
 
 const renderSkill = (skill: keyof typeof images, player: Skill) => {
+    let levelTop = player.level === 0 ? '-' : player.level;
+    let levelBottom = player.level === 0 ? '-' : player.level;
+
     if (skill === "overall") {
         return (
-            <div key={skill} className={styles.skill}>
-                <div className={styles.skillTotalLevel}>
+            <div key={skill} className={styles['skill']}>
+                <div className={styles['skill-total']}>
                     <div>Total Level:</div>
                     <div>{player.level}</div>
                 </div>
@@ -88,30 +91,27 @@ const renderSkill = (skill: keyof typeof images, player: Skill) => {
     }
 
     return (
-        <div key={skill} className={styles.skill}>
-            <div className={styles.skillIcon}>
+        <div key={skill} className={styles['skill']}>
+            <div className={styles['skill__icon']}>
                 <Image src={images[skill]} alt={skill} />
             </div>
-            <div className={styles.skillLevelContainer}>
-                <div className={styles.skillLevelTop}>{player.level}</div>
-                <div className={styles.skillSlant}></div>
-                <div className={styles.skillLevelBottom}>{player.level}</div>
+            <div className={styles['skills__container']}>
+                <div className={styles['skill__level--top']}>{levelTop}</div>
+                <div className={styles['skill__slant']}></div>
+                <div className={styles['skill__level--bottom']}>{levelBottom}</div>
             </div>
         </div>
     )
 }
 
 export const PlayerStats = ({ skills }: PlayerStatsProps) => {
-    console.log(skills);
     let sortedSkills: Partial<Skills> = {};
-    if (skills) {
-        order.forEach(key => {
-            if (skills[key as keyof Skills]) sortedSkills[key as keyof Skills] = skills[key as keyof Skills];
-        });
-    }
+    order.forEach(key => {
+        sortedSkills[key as keyof Skills] = skills[key as keyof Skills] || { level: 0 };
+    });
 
     return (
-        <div className={styles.skillsContainer}>
+        <div className={styles['skills__container']}>
             {Object.entries(sortedSkills).map(([skill, player]) => renderSkill(skill as keyof typeof images, player as Skill))}
         </div>
     )

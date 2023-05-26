@@ -1,9 +1,10 @@
-.noPlayerFoundContainer {
+.player-not-found {
     font-size: medium;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.noPlayerFoundContainer b {
+.player-not-found__highlight {
     color: yellow;
 }

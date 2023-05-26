@@ -1,8 +1,8 @@
-.questsButtonContainer {
+.quests-button {
     font-size: 16px;
     position: relative;
-    background: rgb(121,105,86);
-    background: linear-gradient(175deg, rgba(121,105,86,1) 0%, rgba(41,39,34,1) 100%);
+    background: rgb(121, 105, 86);
+    background: linear-gradient(175deg, rgba(121, 105, 86, 1) 0%, rgba(41, 39, 34, 1) 100%);
     border-radius: 5px;
     border: 1px solid black;
     width: 240px;
@@ -17,15 +17,23 @@
     cursor: pointer;
 }
 
-.questsButtonContainer button {
+.quests-button__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     color: inherit;
     cursor: pointer;
     font-size: large;
     margin-left: 0.4rem;
+    width: 100%;
 }
 
-.questsButtonContainer button:focus {
+.quests-button__text {
+    margin-left: 0.5rem;
+}
+
+.quests-button__btn:focus {
     background: rgba(0, 0, 0, 0.1);
 }
