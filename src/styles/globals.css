@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Runescape';
     src: url('../../public/assets/font/runescape.ttf') format('truetype');
+    font-display: swap;
 }
 
 * {
