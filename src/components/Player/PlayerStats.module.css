@@ -37,7 +37,7 @@
     left: 25px;
     top: 0;
     z-index: 12;
-    font-size: small;
+    font-size: medium;
 }
 
 .skill__slant {
@@ -51,7 +51,7 @@
 }
 
 .skill__level--bottom {
-    font-size: small;
+    font-size: medium;
     text-shadow: 1px 1px black;
     position: absolute;
     left: 58px;
@@ -68,5 +68,5 @@
     height: 34px;
     background-color: #000000;
     color: yellow;
-    font-size: 13px;
+    font-size: medium;
 }

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Runescape';
+    src: url('../../public/assets/font/runescape.ttf') format('truetype');
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -14,6 +19,7 @@ body {
 body {
     color: white;
     font-size: 13px;
+    font-family: 'Runescape', sans-serif;
     background: black url("/assets/image/background.jpg") repeat-y top center;
     text-align: center;
     margin: 0;

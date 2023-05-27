@@ -24,17 +24,22 @@
 .hiscores-container__input {
     background-color: #aca9a6;
     border-radius: 5px;
+    font-family: inherit;
     color: black;
-    font-size: large;
+    font-size: 1.5rem;
     width: 150px;
 }
 
 .hiscores-container__button {
     color: black;
-    font-size: large;
-    margin-left: 2px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     border-radius: 5px;
     background-color: #e2dbc8;
+    border: none;
 }
 
 .quests-container {

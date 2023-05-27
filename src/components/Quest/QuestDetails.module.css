@@ -19,13 +19,15 @@
 }
 
 .details__link {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .details__close {
-    font-size: 16px;
+    font-size: x-large;
+    font-family: inherit;
     position: relative;
     background: rgb(121, 105, 86);
     background: linear-gradient(175deg, rgba(121, 105, 86, 1) 0%, rgba(41, 39, 34, 1) 100%);

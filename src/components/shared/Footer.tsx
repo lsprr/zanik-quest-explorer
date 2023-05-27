@@ -2,7 +2,7 @@ import styles from "./Footer.module.css";
 
 export const Footer = () => {
     return (
-        <div className={styles.footer}>
+        <div className={`${styles.footer}`}>
             <p>
                 Here in the &lsquo;Zanik Quest Explorer&lsquo;, we pride ourselves on being dedicated fans of Old School RuneScape
                 (OSRS), created by the grand masters of online gaming - Jagex. While we&lsquo;re passionate about our creative
