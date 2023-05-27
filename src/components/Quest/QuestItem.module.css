@@ -15,3 +15,7 @@
 .questItem__status-unqualified {
     color: maroon;
 }
+
+.questItem__icon {
+    margin-right: 5px;
+}

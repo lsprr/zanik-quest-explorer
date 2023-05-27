@@ -30,6 +30,7 @@
 }
 
 .hiscores-container__button {
+    color: black;
     font-size: large;
     margin-left: 2px;
     border-radius: 5px;
