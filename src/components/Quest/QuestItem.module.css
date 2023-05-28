@@ -6,6 +6,11 @@
     cursor: pointer;
     font-size: large;
 }
+
+.questItem__title:hover {
+    text-decoration: underline;
+}
+
 .questItem__status {}
 
 .questItem__status-qualified {

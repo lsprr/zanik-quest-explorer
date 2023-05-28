@@ -20,6 +20,13 @@
     text-align: left;
 }
 
+.quests__bodyParagraph {
+    color: #091709;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
 .quests__bodyLoading {
     margin-top: 0;
 }

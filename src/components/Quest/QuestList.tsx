@@ -81,6 +81,7 @@ export const QuestList = ({ skills, quests, loading }: QuestListProps) => {
         <div className={styles.quests}>
             <div className={styles.quests__header} />
             <div className={styles.quests__body}>
+                <p className={styles.quests__bodyParagraph}>Click on a quest title for more information.</p>
                 {loading ? <Loading className={styles.quests__bodyLoading} color={"black"} /> :
                     [...qualified, ...unqualified].map(quest =>
                         <QuestItem key={quest.id} quest={quest} isQualified={qualified.includes(quest)}
