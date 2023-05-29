@@ -44,6 +44,11 @@ export default function Home() {
 
     const handleUsernameSearch = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        if (searchedUsername === "") {
+            return false;
+        }
+
         setIsLoadingSearchedPlayer(true);
         setSearchedPlayer(null);
         setAllQuests([]);
