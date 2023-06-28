@@ -4,6 +4,8 @@ import styles from "./Banner.module.css";
 
 export const Banner = () => {
     return (
-        <Image className={styles.banner} src={osrsLogo} alt='Old School Runescape Logo' loading={"eager"} />
+        <header>
+            <Image className={styles.banner} src={osrsLogo} alt='Old School Runescape Logo' loading={"eager"} />
+        </header>
     )
 }

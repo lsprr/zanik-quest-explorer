@@ -95,7 +95,8 @@ const renderSkill = (skill: keyof typeof images, player: Skill) => {
             <div className={styles['skill__icon']}>
                 <Image src={images[skill]} alt={`${skill} icon`} />
             </div>
-            <div className={styles['skills__container']} aria-label={`${skill} level: ${levelTop}`}>
+            <div className={styles['skills__container']}>
+                <span className="visually-hidden">{skill}</span>
                 <div className={styles['skill__level--top']}>{levelTop}</div>
                 <div className={styles['skill__slant']} role="presentation"></div>
                 <div className={styles['skill__level--bottom']}>{levelBottom}</div>
